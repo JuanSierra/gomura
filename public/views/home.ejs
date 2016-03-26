@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row">
+		<div class="one columns">
+		  <input type="text" placeholder="user" name="user" ng-model="user"/>
+		</div>
+	</div>
+	<div class="row">
+        <form name="form">
+            <div class="one-third column">
+                <input type="text" name="rName" placeholder="room" ng-model="room.name" required=""/>
+            </div>
+            <div class="one-third column">
+                <div ng-show="form.$submitted || form.rName.$touched">
+                  <div ng-show="form.rName.$error.required">*</div>
+                </div>
+            </div>
+            <div class="one-third column">
+                <button type="submit" class="button" ng-click="newRoom()">Create</button>
+            </div>
+        </form>
+	</div> 
+	<div class="row">
+		<button type="submit" class="button" ng-click="joinRoom(user)">Join</button>
+	</div>
+	<div class="row">
+		
+		<select ng-model="selectedRoom" ng-options="r.name for r in rooms" ng-attr-size="{{size+1}}">
+		</select>
+
+	</div>
+</div>

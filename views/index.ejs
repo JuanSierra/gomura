@@ -1,0 +1,51 @@
+<html ng-app="Gomura" >
+  <head>
+    <title>Gomura</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/skeleton.css">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<style>
+		body{
+			font-family: 'Montserrat', sans-serif;
+		}
+		p{
+			padding:5px;
+		}
+		select{
+			width:200px;
+		}
+	</style>
+	<link rel="stylesheet" href="/styles/ngDialog.min.css">
+    <link rel="stylesheet" href="/styles/ngDialog-theme-default.min.css">
+  </head>
+  <body>
+	<ng-view></ng-view>
+	
+	<script type="text/ng-template" id="firstDialogId">
+        <div class="ngdialog-message">
+            <h3>ngDialog template</h3>
+            <p ng-show="theme">Test content for <code>{{theme}}</code></p>
+            <p ng-show="ngDialogId">Dialog Id: <code>{{ngDialogId}}</code></p>
+            <p class="data-passed-through" ng-show="ngDialogData.foo">Data passed through: <code>{{ngDialogData.foo}}</code></p>
+            <p ng-show="dialogModel.message">Scope passed through: <code>{{dialogModel.message}}</code></p>
+            <p>Close this dialog: <button class="inline close-this-dialog" ng-click="closeThisDialog()">Close</button></p>
+
+        </div>
+        <div class="ngdialog-buttons">
+            <button type="button" class="ngdialog-button ngdialog-button-secondary"
+                ng-dialog="secondDialogId"
+                ng-dialog-class="ngdialog-theme-default"
+                ng-dialog-controller="SecondModalCtrl"
+                ng-dialog-close-previous>Close and open</button>
+            <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="openSecond()">Open next</button>
+        </div>
+    </script>
+	
+	<script type="text/javascript" src="/scripts/components/angular.min.js"></script>	
+	<script type="text/javascript" src="/scripts/components/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/scripts/components/angular-route.min.js"></script>
+	<script type="text/javascript" src="/scripts/components/angular-websocket.min.js"></script>
+	<script type="text/javascript" src="/scripts/components/ngDialog.min.js"></script>
+	<script src="/js/app.js"></script>
+  </body>
+</html>

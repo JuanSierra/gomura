@@ -1,0 +1,22 @@
+<form class="pure-form pure-form-stacked">
+	<fieldset>
+
+		<div  class="pure-g">
+			<div ng-repeat="x in categories">
+				<div class="pure-u-1 pure-u-md-1-3">
+					<label for="first-name"></label>
+					<input id="first-name" class="pure-u-23-24" type="text">
+				</div>
+			</div>
+		</div>
+	<button type="submit" class="pure-button pure-button-primary">Submit</button>
+	</fieldset>
+	
+	<div class="pure-menu">
+		<ul class="pure-menu-list">
+			<li ng-repeat="u in users">
+				<a class="pure-menu-link">{{u.name}}</a>
+			</li>
+		</ul>
+	</div>
+</form>
