@@ -6,7 +6,7 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/less/less.js.git"
+    "url": "https://github.com/JuanSierra/gomura.git"
   },
   "license": "Apache-2.0",
   "dependencies": {
