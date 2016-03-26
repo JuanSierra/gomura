@@ -2,6 +2,7 @@
   "name": "gomura",
   "version": "0.1.0",
   "description": "Simple web platform for playing Stop game on multiplayer",
+  
   "main": "server.js",
   "repository": {
     "type": "git",
@@ -10,9 +11,13 @@
   "license": "Apache-2.0",
   "dependencies": {
     "body-parser": "~1.6.7",
+    "ejs": "0.8.8",
     "express": "~3.4.3",
     "lodash": "3.9.0",
     "mongoose": "~3.8.17",
     "ws": "0.4.30"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
