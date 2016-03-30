@@ -2,7 +2,7 @@
 Simple web platform for playing Stop game on multiplayer
 
 ## Requirements
-###MongoDB
+####MongoDB
 1.  Install it from [mongodb.org](https://www.mongodb.org/downloads) 
 2.  Run mongod from a command line
 
